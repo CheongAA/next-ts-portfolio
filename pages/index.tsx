@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 import styled from '@emotion/styled/macro';
 import tw from 'twin.macro';
+import Layout from 'components/layout/Layout';
 
 const Input = tw.input`
     text-center border h-20
@@ -15,14 +16,16 @@ const MyDiv = styled.div`
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          <Input placeholder="box" />
-          <MyDiv>Test Text</MyDiv>
-        </h1>
-      </main>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            <Input placeholder="box" />
+            <MyDiv>Test Text</MyDiv>
+          </h1>
+        </main>
+      </div>
+    </Layout>
   );
 };
 
